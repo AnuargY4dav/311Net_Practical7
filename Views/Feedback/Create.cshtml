@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Create Feedback";
+}
+
+<h2>Student Feedback Form</h2>
+
+@using (Html.BeginForm("Create", "Feedback", FormMethod.Post))
+{
+    <div>
+        <label>Enrollment No</label>
+        <input type="number" name="enrollment" required />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Student Name</label>
+        <input type="text" name="name" required />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Subject</label>
+        <input type="text" name="subject" required />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Rating (1-10)</label>
+        <input type="number" name="rating" min="1" max="10" required />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Comment</label>
+        <textarea name="comment" required></textarea>
+    </div>
+
+    <br />
+
+    <input type="submit" value="Submit" />
+}
